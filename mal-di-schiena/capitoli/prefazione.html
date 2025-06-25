@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <title>Prefazione | Il Mal di Schiena e l'Arte dello Scambio dei Fluidi Corporei</title>
+    <meta name="description" content="Anche il mal di schiena può essere un'opportunità per l'intimità! Compilato da decenni di meticolosa ricerca, questo manuale irriverente offre consigli pratici e creativi per partner, posizioni e ambienti.">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/mal-di-schiena/css/core.css">
+    <link rel="stylesheet" href="/mal-di-schiena/css/lightbox.css">
+    <link rel="stylesheet" href="/mal-di-schiena/css/footer-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script type="module" src="/mal-di-schiena/js/load-modules.js"></script>
+    <script src="/mal-di-schiena/js/scambio.js"></script>
+
+    <script>
+        // When page is loaded, set the navigation links for this page
+        document.addEventListener("DOMContentLoaded", function() {
+            console.log("Updating navigation...");
+            var prevLink = document.getElementById("prev");
+            var nextLink = document.getElementById("next");
+            prevLink.style.visibility = "hidden";
+            nextLink.href = "/mal-di-schiena/capitoli/note-autore.html";
+        });
+    </script>
+</head>
+
+<body>
+    <main>
+        <div class="cover">
+            <div class="inner-page">
+                <div class="block block-single-col text-entry-anim">
+                    <h1 class="slide-right" style="--animation-order:1;">Perché questo manuale?</h1>
+
+                    <p style="--animation-order:2;">Il 95% delle persone hanno provato, almeno una volta nella vita, la poco piacevole esperienza del mal di schiena, una sgradevole evenienza che costringe il malcapitato soggetto alla frustrante limitazione che a volte arriva fino all’interruzione, di tutte le sue attività, rapporti intimi compresi.</p>
+
+                    
+                    <p class="f2" style="--animation-order:3; font-style:italic;">Abbiamo deciso di dire basta. </p>
+
+                    <p style="--animation-order:4;">Questo agile manuale si pone, non solo, l’obiettivo di fornirvi tutte le informazioni per contrastare, il più efficacemente possibile, l’insostenibile situazione di astinenza forzata ma vi indica, anche, in quale maniera impostare un corretto approccio carnale terapeutico.</p>
+
+                    <p style="--animation-order:5;">Se avete già provato una crisi di lombalgia acuta sono certo che apprezzerete con gratitudine.</p>
+
+                    <p style="--animation-order:6;">Se invece fate parte di quella fortunata frangia minoritaria di soggetti che non hanno ancora sperimentato il sottile brivido del blocco lombare non lasciatevi cogliere impreparati-</p>
+                    <p class="f1" style="--animation-order:7;">Studiate prima!</p>
+
+                    <a class="left-align-inline-button" href="#" id="openMenuLink">Vedi i capitoli</a>
+                    <a class="left-align-inline-button" href="/mal-di-schiena/capitoli/note-autore.html">Inizia</a>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer-block></footer-block>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const openMenuLink = document.getElementById('openMenuLink');
+            const menuToggleCheckbox = document.getElementById('menu-toggle');
+
+            if (openMenuLink && menuToggleCheckbox) {
+                openMenuLink.addEventListener('click', function(event) {
+                    event.preventDefault(); // Prevent the default link behavior (e.g., navigating to #)
+                    menuToggleCheckbox.checked = true; // Programmatically check the checkbox
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>

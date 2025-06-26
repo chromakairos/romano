@@ -1,0 +1,288 @@
+@import url('https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&family=Poppins:ital,wght@0,400;0,700;1,700&family=Sour+Gummy&display=swap');
+
+:root {
+    --page-inner-margin: 20px;
+    --white: #ffffff;
+    --heading-color: #0B0096;
+    --accent-color-1: #F30083;
+    /*pink*/
+    --accent-color-2: #F97600;
+    /*orange*/
+    --accent-color-3: #009ffa;
+    /*blue*/
+    --stroke-style: 3px solid #1502A0;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+a {
+    color: var(--heading-color);
+    font-weight: bold;
+    text-underline-offset: 4px;
+}
+
+body {
+    font-family: sans-serif;
+    font-size: 1.3rem;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+}
+
+.landing {
+    width: 100svw;
+    min-height: 100svh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0px;
+    background-color: orange;
+}
+
+.book-section {
+    width: 90%;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    scroll-margin-top: 40px;
+    margin: auto;
+    margin-top: 80px;
+    margin-bottom: 80px;
+    padding: 30px 40px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.96);
+    border: var(--stroke-style);
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.landing .book-section {
+    padding: 60px 80px;
+}
+
+.book-description p {
+    /*font-size: 1.2rem;*/
+    line-height: 1.5em;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: justify;
+}
+
+.coming-soon-list {
+    list-style: none;
+    padding: 0;
+    margin: 30px auto;
+    max-width: 500px;
+}
+
+.coming-soon-list li {
+    font-family: "Afacad Flux";
+    font-weight:300;
+    line-height: 1.1em;
+    text-align: center;
+    border-bottom: 3px dotted var(--accent-color-2);
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.coming-soon-list li:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+
+.tooltip {
+    position: relative;
+    display: inline;
+    border-bottom: 3px dotted var(--accent-color-2);
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 280px;
+    background-color: white;
+    color: black;
+    text-align: center;
+    border-radius: 6px;
+    border: var(--stroke-style);
+    padding: 8px;
+    
+    font-size:0.85em;
+    line-height:1em;
+
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 100;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
+
+/* These styles are the same as book styles */
+.big-button {
+    background: white;
+    background: #fffcf5;
+    border: var(--stroke-style);
+    color: var(--heading-color);
+    border-radius: 7px;
+    padding: 13px 25px;
+    font-size: 28px;
+    font-family: "Sour Gummy", sans-serif;
+    text-transform: uppercase;
+    margin: 0px auto auto auto;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    /* Addition */
+    display: inline-block;
+    /* Addition */
+}
+
+.big-button:hover {
+    background-color: #00C6FA;
+    background-color: var(--accent-color-2);
+    color: black;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    /* Addition */
+}
+
+
+
+#entry-title {
+    padding-top: 2vh;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 2.8rem;
+    /* Larger title */
+    line-height: 1.2;
+}
+
+h1,
+h2,
+h3,
+.toc {
+    font-family: "Poppins";
+    font-weight: bold;
+    text-transform: uppercase;
+    color: var(--heading-color);
+    line-height: 1.15em;
+    margin-top: var(--page-inner-margin);
+}
+
+h2 {
+    font-size: 2rem;
+    /* Adjusted for secondary headings */
+    text-align: center;
+    /* Center book titles */
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+h3 {
+    margin-top: 0px;
+    margin-bottom: 15px;
+    color: var(--accent-color-2);
+}
+
+p {
+    font-family: "Afacad Flux";
+    font-weight: 300;
+    font-size: 1.5rem;
+    line-height: 1.4em;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.f1,
+.f2,
+.f3 {
+    font-weight: 750;
+    letter-spacing: 0.8px;
+}
+
+.f1 {
+    color: var(--accent-color-1);
+}
+
+
+
+/* Animations from core.css */
+@keyframes grow {
+    0% {
+        transform: scale(0, 0);
+    }
+
+    100% {
+        transform: scale(1, 1);
+    }
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.text-entry-anim p,
+.text-entry-anim li {
+    /* Apply opacity to children of text-entry-anim */
+    opacity: 0;
+}
+
+.text-entry-anim.is-visible * {
+    animation: appear 250ms;
+    -webkit-animation: appear 250ms;
+    -moz-animation: appear 250ms;
+    -o-animation: appear 250ms;
+    -ms-animation: appear 250ms;
+    animation-fill-mode: both;
+    animation-timing-function: ease-in-out;
+    animation-delay: calc(50ms + var(--animation-order) * 120ms);
+}
+
+/* Responsive adjustments */
+/* NB: Unlike the books, this page is desktop-first */
+@media only screen and (max-width: 768px) {
+    .landing .book-section {
+        width: 90%;
+        padding: 20px 20px 40px 20px;
+        border-radius: 0px;
+    }
+
+    #entry-title {
+        font-size: 2.2rem;
+    }
+
+    p {
+        font-size: 1.3rem;
+    }
+
+    .big-button {
+        font-size: 24px;
+        padding: 12px 25px;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+}

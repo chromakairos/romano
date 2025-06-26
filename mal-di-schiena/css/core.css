@@ -39,7 +39,6 @@ body {
     font-size: 1.3rem;
     overflow-x: hidden;
     overflow-y: scroll;
-    /* Doesn't work scrollbar-color:red yellow;*/
     scroll-behaviour: smooth;
 }
 
@@ -295,10 +294,8 @@ figcaption.floatright {
 .inner-page {
     width: 100%;
     max-width: 1000px;
-
     flex-direction: column;
-
-    /*margin: 5vh auto;*/
+    margin: 5vh auto;
     padding: 40px;
     overflow: hidden;
     transition: opacity 2;

@@ -124,6 +124,10 @@ img {
     margin: auto;
 }
 
+img#entry-title{
+    max-width:350px;
+}
+
 figure {
     position: relative;
     margin: 0px;

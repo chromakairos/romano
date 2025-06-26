@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /mal-di-schiena/
+Allow: /index.html
+Disallow: /lumbar-pain/

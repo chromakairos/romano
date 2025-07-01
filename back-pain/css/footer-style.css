@@ -1,0 +1,179 @@
+footer, footer-block{
+}
+
+#menu-logo{
+    width:150px;
+    margin-bottom:2px;
+}
+
+#menu-author{
+    margin-bottom:25px;
+    text-transform:uppercase;
+    font-weight:450;
+    font-size:0.7em;
+}
+
+#menu-author a, #menu-author a:hover{
+    color:inherit;
+    text-transform:inherit;
+    text-decoration:inherit;
+}
+
+nav a:hover{
+}
+
+nav .f1 a:hover{
+    border:var(--accent-color-1) solid 2px;
+    padding:2px 8px;
+    background-color:#fff7ed;
+}
+
+nav .f2 a:hover{
+    border:var(--accent-color-2) solid 2px;
+    padding:2px 8px;
+    background-color:#fff7ed;
+}
+
+nav .f3 a:hover{
+    border:var(--accent-color-3) solid 2px;
+    padding:2px 8px;
+    background-color:#fff7ed;
+}
+
+
+/**************************************************
+    Custom styles for the footer navigation bar   
+**************************************************/
+
+/* Hide the checkbox */
+#menu-toggle {
+    display: none;
+}
+
+/* Fixed bottom navigation styles */
+.fixed-bottom-nav {
+    position: fixed;
+    height:70px;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--accent-color-2);
+    background-color: var(--accent-color-3);
+    background-color: var(--heading-color);
+    background-color: var(--accent-color-1);
+    color:var(--white);
+    border-top: 1px solid #e2e8f0;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding: 1.2rem 10vw;
+    box-sizing: border-box;
+    z-index: 30;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    text-align:center /* Align items within their "columns" */
+}
+
+
+
+/* Style for the menu button container */
+.menu-button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    height: 100%;
+}
+
+
+/* Settings for the translucent overlay that covers the screen when the slide-in menu is active */
+.menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+    z-index: 40;
+    display: flex;
+
+}
+
+
+/* Show the overlay when the menu button is clicked */
+#menu-toggle:checked ~ .menu-overlay {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Show the menu when the menu button is clicked */
+#menu-toggle:checked ~ #slide-menu {
+    transform: translateY(0);
+}
+
+
+
+
+
+/**************************************************
+    Slide-in menu & components  
+**************************************************/
+#slide-menu {
+    position: fixed;
+    top: auto;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    min-height: 80%;
+    background-color: white;
+    transform: translateY(100%);
+    transition: transform 0.3s ease-in-out;
+    z-index: 50;
+    overflow-y: auto;
+    padding: 2rem;
+    padding-bottom:6rem;
+    box-sizing: border-box;
+    text-align:center;
+    border-top:10px solid var(--accent-color-2);
+    
+    /*
+    background:url("/assets/fine-speckled-paper.webp");
+    background-repeat:repeat-x repeat-y;
+    */
+}
+
+
+.menu-content {
+    height: 100%;
+    font-size: 1.4rem;
+}
+
+.menu-header {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.close-button {
+    font-size: 1.5rem;
+    color: #4a5568;
+    cursor: pointer;
+    transition: color 0.2s ease-in-out;
+}
+
+.close-button:hover {
+    color: #1a202c;
+}
+
+#slide-menu ul, #slide-menu ol{
+    list-style-type: none;
+    padding-inline-start: 0px;
+}
+
+#slide-menu .toc li{
+    font-size:0.8em;
+    margin-bottom:10px;
+}

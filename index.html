@@ -1,65 +1,67 @@
 <!DOCTYPE html>
-<html lang="it">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>L'Arte dello Scambio</title>
+    <title>The Art of Exchange</title>
     <link rel="stylesheet" href="css/main-style.css">
 </head>
 
 <body>
     <main>
         <div class="landing">
-            <div class="book-section">
-                <h1 id="entry-title">Benvenuti nell'Arte dello Scambio</h1>
+            <div class="book-section language-picker">
+                <h1 id="entry-title">Welcome to The Art of Exchange</h1>
                 <div class="text-entry-anim">
                     <p style="--animation-order:0;">
-                        Attraverso decenni di ricerche meticolose e una revisione paritaria pressoché inesistente,
-                        gli studiosi della <span class="tooltip">GOOE<sup style="color:var(--accent-color-2);">*</sup><span class="tooltiptext">L'Organizzazione Generale degli Scambi (in inglese <i>General Organization Of Exchange</i>)</span></span> vi presentano una collana rivoluzionaria dedicata alla nobile arte dello scambio di fluidi corporei in ogni ambito della vita contemporanea.
+                        Through decades of meticulous research and virtually non-existent peer review, scholars from the <span class="tooltip">GOOE<span style="color:var(--accent-color-2);"> *</span><span class="tooltiptext">The General Organization Of Exchange</span></span> present a revolutionary series dedicated to the noble art of bodily fluid exchange in every aspect of contemporary life.
                     </p>
                     <p style="--animation-order:1;">
-                        Scoprite tecniche senza tempo, rituali dimenticati e scomode verità.
+                        Discover timeless techniques, forgotten rituals, and uncomfortable truths.
                     </p>
-                    <a href="#libri" class="big-button">Scopri i Libri della Serie</a>
+                    <a href="#series" class="big-button">Discover the Series</a>
                 </div>
             </div>
-        </div>
-        
-        
-        <div class="landing">
-        <div class="book-section" id="libri">
-            <h2 class="f3">Il mal di schiena e l'arte dello scambio di fluidi corporei</h2>
-            <h3>Il libro di punta dell'Arte dello Scambio</h3>
-            <div class="book-description text-entry-anim">
-                <p style="--animation-order:2;">
-                    Forte di un vago sentore di scienza e di decenni di appassionata sperimentazione, questo manuale
-                    propone strategie indispensabili per mantenere l’intimità anche con il mal di schiena.
-                </p>
-                <p style="--animation-order:3;">
-                    Tra consigli pratici su partner, posizioni e mobili strategici,
-                    questo volume trasforma le avversità in opportunità, uno scambio di fluidi alla volta. <span class="f1"><i>Ora disponibile online per la prima volta!</i></span>
-                </p>
+            <div id="language-selector">
+                <ul>
+                    <li><a href="/index-it.html">IT 🇮🇹</a></li>
+                    <!--<li>ENG 🇬🇧</li>-->
+                </ul>
             </div>
-            <a href="/mal-di-schiena" class="big-button">
-                Leggilo Ora
-            </a>
         </div>
 
 
+        <div class="landing">
+            <div class="book-section" id="series">
+                <h2 class="f3">Back Pain and the Art of Bodily Fluid Exchange</h2>
+                <h3>The Flagship Book of The Art of Exchange Series</h3>
+                <div class="book-description text-entry-anim">
+                    <p style="--animation-order:2;">
+                        Backed by a vague hint of science and decades of passionate experimentation, this manual
+                        proposes essential strategies to maintain intimacy even with back pain.
+                    </p>
+                    <p style="--animation-order:3;">
+                        With practical advice on partners, positions, and strategic furniture,
+                        this volume turns adversity into opportunity, one fluid exchange at a time. <span class="f1"><i>Now available online for the first time!</i></span>
+                    </p>
+                </div>
+                <a href="/back-pain" class="big-button">
+                    Start Reading
+                </a>
+            </div>
 
-
-        <div class="book-section">
-            <h2>Prossimamente<br/>(possibilmente):</h2>
-            <ul class="coming-soon-list text-entry-anim">
-                <li style="--animation-order:4;">La stagione dell'influenza e l'arte dello scambio di fluidi corporei</li>
-                <li style="--animation-order:5;">Le ferie e l'arte dello scambio di fluidi corporei</li>
-                <li style="--animation-order:6;">La genitorialità e l’arte dello scambio di fluidi corporei</li>
-                <li style="--animation-order:7;">I trasporti pubblici e l'arte dello scambio di fluidi corporei</li>
-                <li style="--animation-order:8;">Le riunioni festive e l’arte dello scambio di fluidi corporei</li>
-                <li style="--animation-order:9;">Le chiacchiere di circostanza e l'arte dello scambio di fluidi corporei</li>
-            </ul>
-        </div>
+            <div class="book-section">
+                <h2>Coming Soon<br />(possibly):</h2>
+                <ul class="coming-soon-list text-entry-anim">
+                    <li style="--animation-order:4;">Flu Season and the Art of Bodily Fluid Exchange</li>
+                    <li style="--animation-order:5;">Vacations and the Art of Bodily Fluid Exchange</li>
+                    <li style="--animation-order:6;">Parenting and the Art of Bodily Fluid Exchange</li>
+                    <li style="--animation-order:7;">Public Transport and the Art of Bodily Fluid Exchange</li>
+                    <li style="--animation-order:8;">Holiday Gatherings and the Art of Bodily Fluid Exchange</li>
+                    <li style="--animation-order:9;">Small Talk and the Art of Bodily Fluid Exchange</li>
+                </ul>
+            </div>
         </div>
     </main>
 
@@ -74,7 +76,7 @@
                 if (rect.top <= viewHeight * 0.9 && rect.bottom >= viewHeight * 0.1) {
                     element.parentElement.classList.add('is-visible');
                 } else {
-                    element.parentElement.classList.remove('is-visible'); 
+                    element.parentElement.classList.remove('is-visible');
                 }
             });
         };
@@ -94,7 +96,6 @@
             // mainElement.style.backgroundRepeat = 'repeat';
             // mainElement.style.backgroundSize = 'auto';
         });
-
     </script>
 </body>
 

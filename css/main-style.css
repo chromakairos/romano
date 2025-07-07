@@ -20,6 +20,8 @@
 
 html {
     scroll-behavior: smooth;
+    margin:0px;
+    padding:0px;
 }
 
 a {
@@ -34,8 +36,11 @@ body {
     overflow-x: hidden;
     overflow-y: scroll;
     scroll-behavior: smooth;
+    margin:0px;
+    padding:0px;
 }
 
+/*
 .landing {
     width: 100svw;
     min-height: 100svh;
@@ -45,31 +50,78 @@ body {
     justify-content: center;
     margin: 0px;
     background-color: orange;
+}*/
+
+.landing{
+    background:orange;
+    background: url("/back-pain/assets/fine-speckled-paper.webp");
+    margin:0px;
+    padding:0px;
+}
+
+.two-col {
+    width:100%;
+  display: flex;
+  flex-wrap: wrap; /* Allows items to wrap to the next line */
+  gap: 20px; /* Space between columns (you can adjust this) */
+padding-left:20px;
+padding-right:20px;
+align-items:stretch;
+}
+
+.intro-section{
+    margin:auto;
+    width: 90%;
+    max-width: 800px;
+    text-align:center;
+    margin-top:0px;
+    padding-top:30px;
+    padding-bottom:20px;
+    
+}
+.intro-section p{
+    line-height:1.2em;
 }
 
 .book-section {
-    width: 90%;
-    max-width: 800px;
+    
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
-    scroll-margin-top: 40px;
+    justify-content:flex-start;
     margin: auto;
-    margin-top: 80px;
-    margin-bottom: 80px;
+    scroll-margin-top: 40px;
     padding: 30px 40px;
     text-align: center;
-    background-color: rgba(255, 255, 255, 0.96);
+    /*background-color: rgba(255, 255, 255, 0.96);*/
+    background-color:white;
     border: var(--stroke-style);
-    border-radius: 15px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);\
+    
+    /*
+    
+    margin-top: 80px;
+    margin-bottom: 80px;
+    
+    */
 }
 
 .landing .book-section {
-    padding: 60px 80px;
+    width: 90%;
+    max-width: 800px;
+    padding: 30px 30px;
 }
+
+.two-col .book-section {
+    margin-top:0px;
+    margin-bottom:0px;
+  flex: 1; 
+  min-width: 400px; /* Minimum width for a column before wrapping */
+    flex-grow: 1;
+}
+
 
 .book-description p {
     /*font-size: 1.2rem;*/
@@ -278,10 +330,15 @@ p {
 /* Responsive adjustments */
 /* NB: Unlike the books, this page is desktop-first */
 @media only screen and (max-width: 768px) {
+    /*
     .landing .book-section {
         width: 90%;
         padding: 20px 20px 40px 20px;
         border-radius: 0px;
+    }*/
+    
+    .two-col .book-section{
+        min-width:90%;
     }
 
     #entry-title {

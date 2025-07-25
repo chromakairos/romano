@@ -5,73 +5,84 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Art of Exchange</title>
-    <link rel="stylesheet" href="css/main-style.css?v=20250707">
+    <link rel="stylesheet" href="css/main-style.css?v=20250725">
 </head>
 
 <body>
     <main>
+
         <div class="landing">
+            <div class="language-switcher-bar">
+                <a href="/index.html" lang="en" class="language-bar-item active" title="Switch to English">
+                    <span class="flag-icon" role="img" aria-label="Flag of United States">🇺🇸</span> <span class="lang-text">English</span>
+                </a>
+                <a href="/index-it.html" lang="it" class="language-bar-item" title="Passa all'italiano">
+                    <span class="flag-icon" role="img" aria-label="Flag of Italy">🇮🇹</span>
+                    <span class="lang-text">Italiano</span>
+                </a>
+                <!-- Future Spanish option
+                    <a href="?lang=es" lang="es" class="language-bar-item" title="Cambiar a español">
+                        <span class="flag-icon" role="img" aria-label="Flag of Spain">🇪🇸</span>
+                        <span class="lang-text">Español</span>
+                    </a>
+                -->
+            </div>
+
             <div class="intro-section">
+
                 <h1 id="entry-title">Welcome to The Art of Exchange</h1>
                 <div class="text-entry-anim">
                     <p style="--animation-order:0;">
-                        Through decades of meticulous research and virtually non-existent peer review, scholars from the <span class="tooltip">GOOE<span class="tooltiptext">The General Organization Of Exchange</span></span><span style="color:var(--accent-color-2);"> *</span> present a revolutionary series dedicated to the noble art of bodily fluid exchange in every aspect of contemporary life. Discover timeless techniques, forgotten rituals, and uncomfortable truths.
-                    </p>
-                    <div id="language-selector">
-                <ul>
-                    <li><a href="/index-it.html">IT 🇮🇹</a></li>
-                    <!--<li>ENG 🇬🇧</li>-->
-                </ul>
-            </div>
-            </div>
-            </div>
-        
-        
-        <div class="two-col">
-        
-            <div class="book-section" id="series">
-                <h2 class="f3">Back Pain and the Art of Bodily Fluid Exchange</h2>
-                <h3>The Flagship Book of The Art of Exchange Series</h3>
-                <div class="book-description text-entry-anim">
-                    <p style="--animation-order:2;">
-                        Backed by a vague hint of science and decades of passionate experimentation, this manual
-                        proposes essential strategies to maintain intimacy even with back pain.
-                    </p>
-                    <p style="--animation-order:3;">
-                        With practical advice on partners, positions, and strategic furniture,
-                        this volume turns adversity into opportunity, one fluid exchange at a time. <span class="f1"><i>Now available online for the first time!</i></span>
+                        
+                        After decades of meticulous research and thorough review by recognized experts from a variety of social fields, the President of <span class="tooltip">GOOE<span class="tooltiptext">The General Organization Of Exchange</span></span><span style="color:var(--accent-color-2);"> *</span> presents you with a groundbreaking series dedicated to the noble art of body fluid exchange in every sphere of contemporary life.
                     </p>
                 </div>
-                <a href="/back-pain" class="big-button">
-                    Start Reading
-                </a>
             </div>
 
-            <div class="book-section">
-                <h2>Coming Soon<br />(possibly):</h2>
-                <ul class="coming-soon-list text-entry-anim">
-                    <li style="--animation-order:2;">Flu Season and the Art of Bodily Fluid Exchange</li>
-                    <li style="--animation-order:3;">Vacations and the Art of Bodily Fluid Exchange</li>
-                    <li style="--animation-order:4;">Parenting and the Art of Bodily Fluid Exchange</li>
-                    <li style="--animation-order:5;">Public Transport and the Art of Bodily Fluid Exchange</li>
-                    <li style="--animation-order:6;">Holiday Gatherings and the Art of Bodily Fluid Exchange</li>
-                    <li style="--animation-order:9;">Small Talk and the Art of Bodily Fluid Exchange</li>
-                </ul>
-            </div>
+</div>
+            <div class="two-col">
 
-        </div>
+                <div class="book-section" id="series">
+                    <h2 class="f3">Back Pain and the Art of Bodily Fluid Exchange</h2>
+                    <h3>The Flagship Book of The Art of Exchange Series</h3>
+                    <div class="book-description text-entry-anim">
+                        <p style="--animation-order:1;">
+                            Through the skillful blending of scientific knowledge and decades of passionate experimentation, this handbook offers indispensable strategies for continuing the healthy practice of intimate relationships even in the event of unfortunate back pain.
+                        </p>
+                        <p style="--animation-order:2;">
+                            Offerings practical advice on partners, positions, and strategic supports, this volume turns adversity into opportunity, one fluid exchange after another. <span class="f1"><i>Now available online for the first time!</i></span>
+                        </p>
+                    </div>
+                    <a href="/back-pain" class="big-button">
+                        Start Reading
+                    </a>
+                </div>
+
+                <div class="book-section">
+                    <h2>Coming Soon<br />(possibly):</h2>
+                    <ul class="coming-soon-list text-entry-anim">
+                        <li style="--animation-order:3;">Flu Season and the Art of Bodily Fluid Exchange</li>
+                        <li style="--animation-order:4;">Vacations and the Art of Bodily Fluid Exchange</li>
+                        <li style="--animation-order:5;">Parenting and the Art of Bodily Fluid Exchange</li>
+                        <li style="--animation-order:6;">Public Transport and the Art of Bodily Fluid Exchange</li>
+                        <li style="--animation-order:7;">Holiday Gatherings and the Art of Bodily Fluid Exchange</li>
+                        <li style="--animation-order:8;">Small Talk and the Art of Bodily Fluid Exchange</li>
+                    </ul>
+                </div>
+
+            </div>
         
     </main>
 
     <script>
-        // Funzione per controllare la visibilità degli elementi animati
+        // Check visibility of elements and cue text animations
         const checkVisibility = () => {
             const elements = document.querySelectorAll('.text-entry-anim p, .text-entry-anim li');
             elements.forEach(element => {
                 const rect = element.getBoundingClientRect();
                 const viewHeight = window.innerHeight || document.documentElement.clientHeight;
-                // Se l'elemento è visibile nel viewport
-                if (rect.top <= viewHeight * 0.9 && rect.bottom >= viewHeight * 0.1) {
+                
+                if (rect.bottom >= viewHeight * 0.1){
                     element.parentElement.classList.add('is-visible');
                 } else {
                     element.parentElement.classList.remove('is-visible');
@@ -79,21 +90,9 @@
             });
         };
 
-        // Esegui il controllo all'inizio e ad ogni scroll
         window.addEventListener('load', checkVisibility);
         window.addEventListener('scroll', checkVisibility);
-
-        // Aggiungi un'immagine di sfondo dinamica o un colore se non specificato
-        document.addEventListener('DOMContentLoaded', function() {
-            const mainElement = document.querySelector('main');
-            // Puoi scegliere di usare un'immagine di sfondo come nel tuo CSS originale, o semplicemente un colore
-            // Esempio con un colore di sfondo semplice se non vuoi un'immagine per questa pagina:
-            mainElement.style.backgroundColor = '#f8f8f8'; // Un colore grigio chiaro per lo sfondo
-            // Se vuoi un'immagine di sfondo:
-            // mainElement.style.backgroundImage = 'url("/mal-di-schiena/assets/fine-speckled-paper.webp")'; // Assicurati che il percorso sia corretto
-            // mainElement.style.backgroundRepeat = 'repeat';
-            // mainElement.style.backgroundSize = 'auto';
-        });
+        
     </script>
 </body>
 

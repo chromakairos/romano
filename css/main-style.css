@@ -20,8 +20,8 @@
 
 html {
     scroll-behavior: smooth;
-    margin:0px;
-    padding:0px;
+    margin: 0px;
+    padding: 0px;
 }
 
 a {
@@ -36,71 +36,73 @@ body {
     overflow-x: hidden;
     overflow-y: scroll;
     scroll-behavior: smooth;
-    margin:0px;
-    padding:0px;
+    margin: 0px;
+    padding: 0px;
+    background: orange;
 }
 
-/*
 .landing {
-    width: 100svw;
-    min-height: 100svh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin: 0px;
-    background-color: orange;
-}*/
-
-.landing{
-    background:orange;
+    background:white;
     background: url("/back-pain/assets/fine-speckled-paper.webp");
-    margin:0px;
-    padding:0px;
+    
+    margin: 0px;
+    padding: 0px;
+    padding-top: 5vh;
+    padding-bottom:5vh;
 }
 
 .two-col {
-    width:100%;
-  display: flex;
-  flex-wrap: wrap; /* Allows items to wrap to the next line */
-  gap: 20px; /* Space between columns (you can adjust this) */
-padding-left:20px;
-padding-right:20px;
-align-items:stretch;
-    padding-bottom:60px;
-}
-
-.intro-section{
-    margin:auto;
-    width: 90%;
-    max-width: 800px;
-    text-align:center;
-    margin-top:0px;
-    padding-top:30px;
-    padding-bottom:20px;
+    border-top:var(--stroke-style);
+    background:url("/assets/abstract-bg.png");
+    background-size:cover;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    /* Allows items to wrap to the next line */
+    gap: 20px;
+    /* Space between columns (you can adjust this) */
+    padding-left: 20px;
+    padding-right: 20px;
+    align-items: stretch;
+    padding-top:10vh;
+    padding-bottom: 10vh;
     
 }
-.intro-section p{
-    line-height:1.2em;
+
+.intro-section {
+    margin: auto;
+    width: 90%;
+    max-width: 800px;
+    text-align: center;
+    margin-top: 0px;
+    padding-top: 30px;
+}
+
+.intro-section p {
+    line-height: 1.2em;
+    /*
+    font-weight:bold;
+    color:black;*/
 }
 
 .book-section {
-    
+
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    justify-content:flex-start;
+    justify-content: flex-start;
     margin: auto;
     scroll-margin-top: 40px;
     padding: 30px 40px;
     text-align: center;
     /*background-color: rgba(255, 255, 255, 0.96);*/
-    background-color:white;
+    background-color: white;
     border: var(--stroke-style);
     border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);\
-    
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    \
+
     /*
     
     margin-top: 80px;
@@ -109,17 +111,13 @@ align-items:stretch;
     */
 }
 
-.landing .book-section {
-    width: 90%;
-    max-width: 800px;
-    padding: 30px 30px;
-}
 
 .two-col .book-section {
-    margin-top:0px;
-    margin-bottom:0px;
-  flex: 1; 
-  min-width: 400px; /* Minimum width for a column before wrapping */
+    margin-top: 0px;
+    margin-bottom: 0px;
+    flex: 1;
+    min-width: 400px;
+    /* Minimum width for a column before wrapping */
     flex-grow: 1;
 }
 
@@ -127,7 +125,7 @@ align-items:stretch;
 .book-description p {
     /*font-size: 1.2rem;*/
     line-height: 1.3em;
-    line-height:1.05em;
+    line-height: 1.05em;
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
@@ -143,7 +141,7 @@ align-items:stretch;
 
 .coming-soon-list li {
     font-family: "Afacad Flux";
-    font-weight:300;
+    font-weight: 300;
     line-height: 1.1em;
     text-align: center;
     border-bottom: 3px dotted var(--accent-color-2);
@@ -162,44 +160,30 @@ align-items:stretch;
     position: relative;
     display: inline;
     border-bottom: 3px dotted var(--accent-color-2);
+    z-index:0;
 }
 
 .tooltip .tooltiptext {
     visibility: hidden;
-    width: 280px;
+    width: 250px;
     background-color: white;
     color: black;
     text-align: center;
     border-radius: 6px;
-    border: var(--stroke-style);
+    /*border: var(--stroke-style);*/
     padding: 8px;
-    
-    font-size:0.85em;
-    line-height:1em;
 
-    /* Position the tooltip */
+    font-size: 0.85em;
+    line-height: 1em;
+    font-weight:normal;
+
     position: absolute;
-    z-index: 100;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    z-index:999;
 }
 
 .tooltip:hover .tooltiptext {
     visibility: visible;
-}
-
-.language-picker{
-    margin-bottom:20px !important;
-}
-#language-selector li{
-    margin-top:0px;
-    display:inline;
-    margin-right:50px;
-}
-#language-selector a{
-    color:inherit;
-    text-transform:none;
-    text-decoration:none;
-    font-weight:inherit;
-    font-family: "Sour Gummy", sans-serif;
 }
 
 /* These styles are the same as book styles */
@@ -232,7 +216,7 @@ align-items:stretch;
 
 
 #entry-title {
-    padding-top: 2vh;
+    /*padding-top: 2vh;*/
     margin-bottom: 20px;
     text-align: center;
     font-size: 2.8rem;
@@ -328,6 +312,94 @@ p {
     animation-delay: calc(50ms + var(--animation-order) * 120ms);
 }
 
+
+/* Container for the language switcher bar */
+.language-switcher-bar {
+    position: relative;
+    /* Allows for absolute positioning of internal elements if needed later */
+    display: block;
+    width: fit-content;
+    margin: 0 5vw 0 auto;
+    z-index: 999;
+
+    display: flex; /* Horizontal display */
+
+    background-color: white;
+    border-radius: 3px;
+    overflow: hidden; /* Ensures internal rounded corners blend */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08); /* Soft shadow */
+
+
+}
+
+/* Individual language item within the bar */
+.language-switcher-bar .language-bar-item {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    flex-basis: 0;
+    justify-content: center;
+    padding: 9px 15px; /* Ample padding for touch targets */
+    
+    font-family: "Sour Gummy", sans-serif;
+    text-transform: uppercase;
+    font-size: 0.8em;
+    text-decoration: none;
+    font-size: 0.9em;
+    font-weight: 500;
+    white-space: nowrap;
+    color: var(--heading-color);
+    
+    transition: background-color 0.2s ease, color 0.2s ease;
+    
+    /*border-right: 1px solid #e0e0e0;*/ /* Separator between items, to add back in once there are more than two options */
+}
+
+/* Remove the last item's border */
+.language-switcher-bar .language-bar-item:last-child {
+    border-right: none;
+}
+
+/* Hover and Focus states for individual items */
+.language-switcher-bar .language-bar-item:hover,
+.language-switcher-bar .language-bar-item:focus {
+    background-color: var(--accent-color-2);
+    color: white;
+    outline: none; /* Remove default focus outline */
+}
+
+/* Active language item styling */
+.language-switcher-bar .language-bar-item.active {
+    background-color: var(--accent-color-3);
+    /* Primary blue for active item */
+    color: white;
+    /* White text for active item */
+    font-weight: 600;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
+    /* Subtle inner shadow for active state */
+}
+
+/* Flag Icon Styling */
+.language-switcher-bar .flag-icon {
+    font-size: 1.2em;
+    /* Adjust size of emoji flags */
+    margin-right: 8px;
+    /* Space between flag and text */
+    /* When replacing with image sprites, use these properties: */
+    /* width: 24px; */
+    /* Example width */
+    /* height: 16px; */
+    /* Example height (3:2 aspect ratio) */
+    /* background-size: cover; */
+    /* background-repeat: no-repeat; */
+    /* background-position: center; */
+    /* border: 1px solid rgba(0,0,0,0.1); */
+    /* Subtle border for image flags */
+    /* border-radius: 2px; */
+    /* Slight roundness for image flags */
+}
+
+
 /* Responsive adjustments */
 /* NB: Unlike the books, this page is desktop-first */
 @media only screen and (max-width: 768px) {
@@ -337,9 +409,9 @@ p {
         padding: 20px 20px 40px 20px;
         border-radius: 0px;
     }*/
-    
-    .two-col .book-section{
-        min-width:90%;
+
+    .two-col .book-section {
+        min-width: 90%;
     }
 
     #entry-title {
@@ -357,6 +429,16 @@ p {
 
     h2 {
         font-size: 1.8rem;
+    }
+
+    .landing {
+        padding-top: 0px;
+    }
+
+    .language-switcher-bar {
+        width: 100%;
+        float: none;
+        margin: 0px;
     }
 
 }

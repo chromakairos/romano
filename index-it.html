@@ -10,25 +10,40 @@
 
 <body>
     <main>
+
         <div class="landing">
-            <div class="book-section language-picker">
+            <div class="language-switcher-bar">
+                <a href="/index.html" lang="en" class="language-bar-item" title="Switch to English">
+                    <span class="flag-icon" role="img" aria-label="Flag of United States">🇺🇸</span> <span class="lang-text">English</span>
+                </a>
+                <a href="/index-it.html" lang="it" class="language-bar-item  active"  title="Passa all'italiano">
+                    <span class="flag-icon" role="img" aria-label="Flag of Italy">🇮🇹</span>
+                    <span class="lang-text">Italiano</span>
+                </a>
+                <!-- Future Spanish option
+                    <a href="?lang=es" lang="es" class="language-bar-item" title="Cambiar a español">
+                        <span class="flag-icon" role="img" aria-label="Flag of Spain">🇪🇸</span>
+                        <span class="lang-text">Español</span>
+                    </a>
+                -->
+            </div>
+
+            <div class="intro-section">
+
                 <h1 id="entry-title">Benvenuti nell'Arte dello Scambio</h1>
                 <div class="text-entry-anim">
                     <p style="--animation-order:0;">
+
                         Dopo decenni di ricerche meticolose e una revisione accurata da parte di riconosciuti esperti dei più svariati ambiti sociali,  il Presidente della <span class="tooltip">GOOE<span class="tooltiptext">General Organization Of Exchange (<i>L'Organizzazione Generale degli Scambi</i>)</span></span><span style="color:var(--accent-color-2);"> *</span> vi presentano una collana rivoluzionaria dedicata alla nobile arte dello scambio di fluidi corporei in ogni ambito della vita contemporanea.
                     </p>
-                    <a href="#libri" class="big-button">Scopri i Libri della Serie</a>
                 </div>
             </div>
-            <div id="language-selector"><ul>
-                <!--<li>IT 🇮🇹</li>-->
-                <li><a href="/index.html">ENG 🇬🇧</a></li></ul></div>
+
         </div>
-        
-        
-        <div class="landing">
-        <div class="book-section" id="libri">
-            <h2 class="f3">Il mal di schiena e l'arte dello scambio di fluidi corporei</h2>
+        <div class="two-col">
+
+            <div class="book-section" id="series">
+                <h2 class="f3">Il mal di schiena e l'arte dello scambio di fluidi corporei</h2>
             <h3>Il libro di punta dell'Arte dello Scambio</h3>
             <div class="book-description text-entry-anim">
                 <p style="--animation-order:2;">
@@ -41,13 +56,10 @@
             <a href="/mal-di-schiena" class="big-button">
                 Leggilo Ora
             </a>
-        </div>
+            </div>
 
-
-
-
-        <div class="book-section">
-            <h2>Prossimamente<br/>(possibilmente):</h2>
+            <div class="book-section">
+                            <h2>Prossimamente<br/>(possibilmente):</h2>
             <ul class="coming-soon-list text-entry-anim">
                 <li style="--animation-order:4;">La stagione dell'influenza e l'arte dello scambio di fluidi corporei</li>
                 <li style="--animation-order:5;">Le ferie e l'arte dello scambio di fluidi corporei</li>
@@ -56,42 +68,30 @@
                 <li style="--animation-order:8;">Le riunioni festive e l’arte dello scambio di fluidi corporei</li>
                 <li style="--animation-order:9;">Le chiacchiere di circostanza e l'arte dello scambio di fluidi corporei</li>
             </ul>
+            </div>
+
         </div>
-        </div>
+
     </main>
 
     <script>
-        // Funzione per controllare la visibilità degli elementi animati
+        // Check visibility of elements and cue text animations
         const checkVisibility = () => {
             const elements = document.querySelectorAll('.text-entry-anim p, .text-entry-anim li');
             elements.forEach(element => {
                 const rect = element.getBoundingClientRect();
                 const viewHeight = window.innerHeight || document.documentElement.clientHeight;
-                // Se l'elemento è visibile nel viewport
-                if (rect.top <= viewHeight * 0.9 && rect.bottom >= viewHeight * 0.1) {
+
+                if (rect.bottom >= viewHeight * 0.1) {
                     element.parentElement.classList.add('is-visible');
                 } else {
-                    element.parentElement.classList.remove('is-visible'); 
+                    element.parentElement.classList.remove('is-visible');
                 }
             });
         };
 
-        // Esegui il controllo all'inizio e ad ogni scroll
         window.addEventListener('load', checkVisibility);
         window.addEventListener('scroll', checkVisibility);
-
-        // Aggiungi un'immagine di sfondo dinamica o un colore se non specificato
-        document.addEventListener('DOMContentLoaded', function() {
-            const mainElement = document.querySelector('main');
-            // Puoi scegliere di usare un'immagine di sfondo come nel tuo CSS originale, o semplicemente un colore
-            // Esempio con un colore di sfondo semplice se non vuoi un'immagine per questa pagina:
-            mainElement.style.backgroundColor = '#f8f8f8'; // Un colore grigio chiaro per lo sfondo
-            // Se vuoi un'immagine di sfondo:
-            // mainElement.style.backgroundImage = 'url("/mal-di-schiena/assets/fine-speckled-paper.webp")'; // Assicurati che il percorso sia corretto
-            // mainElement.style.backgroundRepeat = 'repeat';
-            // mainElement.style.backgroundSize = 'auto';
-        });
-
     </script>
 </body>
 
